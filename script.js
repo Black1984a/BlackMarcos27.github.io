@@ -1,14 +1,14 @@
 const words = [
-  { image: "father.png", chinese: "爸爸", pinyin: "Bàba", thai: "พ่อ" },
-  { image: "mother.png", chinese: "妈妈", pinyin: "Māmā", thai: "แม่" },
-  { image: "brother.png", chinese: "哥哥", pinyin: "Gēgē", thai: "พี่ชาย" },
-  { image: "sister.png", chinese: "妹妹", pinyin: "Mèimei", thai: "น้องสาว" },
-  { image: "grandfather.png", chinese: "爷爷", pinyin: "Yéye", thai: "คุณปู่" },
-  { image: "grandmother.png", chinese: "奶奶", pinyin: "Nǎinai", thai: "คุณย่า" },
-  { image: "uncle.png", chinese: "叔叔", pinyin: "Shūshu", thai: "ลุง" },
-  { image: "aunt.png", chinese: "阿姨", pinyin: "Āyí", thai: "ป้า" },
-  { image: "cousin.png", chinese: "表哥", pinyin: "Biǎogē", thai: "ลูกพี่ลูกน้องชาย" },
-  { image: "child.png", chinese: "孩子", pinyin: "Háizi", thai: "เด็ก" },
+  { image: “father.png”, chinese: “爸爸”, pinyin: “Bàba”, thai: “พ่อ” },
+  { image: “mother.png”, chinese: “妈妈”, pinyin: “Māmā”, thai: “แม่” },
+  { image: “brother.png”, chinese: “哥哥”, pinyin: “Gēge”, thai: “พี่ชาย” },
+  { image: “sister.png”, chinese: “妹妹”, pinyin: “Mèimei”, thai: “น้องสาว” },
+  { image: “grandfather.png”, chinese: “爷爷”, pinyin: “Yéye”, thai: “คุณปู่” },
+  { image: “grandmother.png”, chinese: “奶奶”, pinyin: “Nǎinai”, thai: “คุณย่า” },
+  { image: “uncle.png”, chinese: “叔叔”, pinyin: “Shūshu”, thai: “ลุง” },
+  { image: “aunt.png”, chinese: “阿姨”, pinyin: “Āyí”, thai: “ป้า” },
+  { image: “cousin.png”, chinese: “表哥”, pinyin: “Biǎogē”, thai: “ลูกพี่ลูกน้องชาย” },
+  { image: “child.png”, chinese: “孩子”, pinyin: “Háizi”, thai: “เด็ก” },
 ];
 
 let currentWord = {};
