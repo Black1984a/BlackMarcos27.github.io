@@ -15,15 +15,18 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      /*background-size: cover; /* ทำให้พื้นหลังขยายให้พอดีกับขนาดหน้าจอ */
+      background-position: center;
     }
 
     .game-container {
-      background: white;
+      background: rgb(230, 218, 243); /* พื้นหลังเริ่มต้น */
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       max-width: 900px;
       width: 100%;
+      text-align: center;
     }
 
     .word-list {
@@ -83,6 +86,7 @@
       font-size: 18px;
       font-weight: bold;
     }
+    
   </style>
   <div class="game-container">
     <!-- หน้าแรก -->
@@ -111,6 +115,48 @@
       <button class="button next-word" id="next-word" style="display: none;">🆕 คำถัดไป</button>
     </div>
   </div>
+
+  <script>
+    // ฟังก์ชันสำหรับเปลี่ยนสีของ .game-container
+    function changeGameContainerColor() {
+      const gameContainer = document.querySelector('.game-container');
+      gameContainer.style.backgroundColor = 'rgb(255, 209, 191)'; // เปลี่ยนเป็นสีฟ้าเมื่อคลิกคำถัดไป
+      gameContainer.style.backgroundColor = 'rgb(255, 191, 191)';
+      gameContainer.style.backgroundColor = 'rgb(240, 255, 191)';
+      gameContainer.style.backgroundColor = 'rgb(191, 255, 201)';
+      gameContainer.style.backgroundColor = 'rgb(191, 255, 239)';
+      gameContainer.style.backgroundColor = 'rgb(191, 233, 255)';
+      gameContainer.style.backgroundColor = 'rgb(191, 206, 255)';
+      gameContainer.style.backgroundColor = 'rgb(203, 191, 255)';
+    }
+
+      // ฟังก์ชันสำหรับเปลี่ยนพื้นหลัง
+      function changeBackground() {
+      const backgrounds = [
+        'background2.jpg',
+        'background3.jpg',
+        'background4.jpg',
+        'background5.jpg',
+        'background6.jpg',
+        'background7.jpg',
+        'background8.jpg',
+      ];
+
+      // เลือกรูปภาพพื้นหลังแบบสุ่ม
+      const randomIndex = Math.floor(Math.random() * backgrounds.length);
+      const newBackground = backgrounds[randomIndex];
+
+      // เปลี่ยนพื้นหลังของ body
+      document.body.style.backgroundImage = `url('${newBackground}')`;
+    }
+
+    // เมื่อคลิกปุ่ม "คำถัดไป" ให้เปลี่ยนพื้นหลัง
+    document.getElementById('next-word').addEventListener('click', changeBackground);
+
+    // เมื่อคลิกปุ่ม "ถัดไป" ในหน้าเกม
+    document.getElementById('next-button').onclick = changeBackground;
+
+  </script>
 
   <script src="script.js"></script>
 </body>
