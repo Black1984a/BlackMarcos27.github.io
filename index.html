@@ -10,7 +10,7 @@
       font-family: 'Prompt', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      background: url('background.jpg');
       display: flex;
       justify-content: center;
       align-items: center;
@@ -84,41 +84,36 @@
       font-weight: bold;
     }
   </style>
-</head>
-<body>
   <div class="game-container">
     <!-- หน้าแรก -->
     <div id="home">
-      <h1>เกมเรียงคำศัพท์: ครอบครัว</h1>
+      <h1>🎮 เกมเรียงคำศัพท์: ครอบครัว 👨‍👩‍👧‍👦</h1>
+      <p>เรียนรู้คำศัพท์ภาษาจีนเกี่ยวกับครอบครัวและสนุกไปกับการเรียงพินอินให้ถูกต้อง!</p>
       <div class="word-list" id="word-list">
-        <!-- คำศัพท์ -->
+        <!-- คำศัพท์จะถูกเพิ่มที่นี่ -->
       </div>
-      <button class="button" id="start-button">เริ่มเกม</button>
+      <button class="button start" id="start-button">🚀 เริ่มเกม</button>
     </div>
 
     <!-- หน้าเกม -->
     <div id="game">
-      <h2>เรียงพินอินให้ถูกต้อง</h2>
+      <h2>🔡 เรียงพินอินให้ถูกต้อง</h2>
       <div id="pinyin-letters"></div>
-      <button class="button" id="check-answer" disabled>ตรวจคำตอบ</button>
+      <button class="button check" id="check-answer" disabled>✅ ตรวจคำตอบ</button>
       <p id="result"></p>
     </div>
+
+    <!-- ปุ่มเพิ่มเติม -->
+    <div class="buttons-container">
+      <button class="button restart" id="restart-button" style="display: none;">🔄 เริ่มใหม่</button>
+      <button class="button back" id="back-button" style="display: none;">↩️ ย้อนกลับ</button>
+      <button class="button next" id="next-button" style="display: none;">➡️ ถัดไป</button>
+      <button class="button next-word" id="next-word" style="display: none;">🆕 คำถัดไป</button>
+    </div>
   </div>
-  <div class="buttons-container">
-    <button class="button" id="restart-button" style="display: none;">เริ่มใหม่</button>
-    <button class="button" id="back-button" style="display: none;">ย้อนกลับ</button>
-    <button class="button" id="next-button" style="display: none;">ถัดไป</button>
-    <button class="button" id="next-word" style="display: none;">ถัดไป</button>
-  </div>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinese Family Game</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  
 
   <script src="script.js"></script>
 </body>
 </html>
+
 <!--BlackMarcos->
