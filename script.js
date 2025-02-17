@@ -123,7 +123,11 @@ function displayAnswer() {
 }
 
 function checkAnswer() {
-  if (userAnswer.join("") === currentWord.pinyin) {
+  // ตรวจสอบว่าใส่คำศัพท์ครบหรือยัง
+  if (userAnswer.length < currentWord.pinyin.length) {
+    resultText.textContent = "ยังใส่คำศัพท์ไม่ครบ! กรุณาใส่พินอินให้ครบก่อนตรวจคำตอบ";
+    resultText.style.color = "orange"; // ใช้สีเตือน
+  } else if (userAnswer.join("") === currentWord.pinyin) {
     resultText.textContent = `คำตอบถูกต้อง! คำศัพท์: ${currentWord.chinese} (${currentWord.pinyin}) แปลว่า ${currentWord.thai}`;
     resultText.style.color = "green";
     document.getElementById("next-word").style.display = "inline-block"; // แสดงปุ่มถัดไป
@@ -135,7 +139,6 @@ function checkAnswer() {
     document.getElementById("restart-button").style.display = "inline-block"; // แสดงปุ่มเริ่มใหม่
   }
 }
-
 function nextWord() {
   const randomIndex = Math.floor(Math.random() * words.length);
   currentWord = words[randomIndex];
